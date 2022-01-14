@@ -12,11 +12,11 @@ To get an overview of what final result would look like, please see [announcemen
 Clone this repo
 
 ```sh
-git clone https://github.com/rustomax/lhm-scripts.git
+git clone https://github.com/rustomax/observe-lhm-installers.git
 ```
 
-Create variables file `vars.sh` and populate it with relevant info, replacing placeholders with correct values
-Datacenter can be any arbitrary string. It provides a way to group various hosts together into logical or geographic entities.
+Create variables file `vars.sh` with the following content, replacing placeholders with correct values.
+Datacenter can be any arbitrary string. It provides a way to logically group various hosts together.
 
 ```sh
 #!/bin/bash
