@@ -11,12 +11,12 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # Add fluentbit apt repository
-wget -qO - https://packages.fluentbit.io/fluentbit.key | sudo apt-key add -
+wget -qO - https://packages.fluentbit.io/fluentbit.key | apt-key add -
 source /etc/lsb-release
 
 if ! grep -Fq https://packages.fluentbit.io/${DISTRIB_ID,,} /etc/apt/sources.list.d/fluentbit.list
 then
-  sudo tee -a /etc/apt/sources.list.d/fluentbit.list > /dev/null <<EOT
+  tee -a /etc/apt/sources.list.d/fluentbit.list > /dev/null <<EOT
 deb https://packages.fluentbit.io/${DISTRIB_ID,,}/${DISTRIB_CODENAME} ${DISTRIB_CODENAME} main
 EOT
 fi
