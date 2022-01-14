@@ -13,6 +13,7 @@ Clone this repo
 
 ```sh
 git clone https://github.com/rustomax/observe-lhm-installers.git
+cd observe-lhm-installers
 ```
 
 Create variables file `vars.sh` with the following content, replacing placeholders with correct values.
