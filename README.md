@@ -37,7 +37,7 @@ Install agents
 
 ```sh
 cd ubuntu-20.04
-./install-osquery.sh
-./install-fluentbit.sh
-./install-telegraph.sh
+sudo ./install-osquery.sh
+sudo ./install-fluentbit.sh
+sudo ./install-telegraph.sh
 ```
