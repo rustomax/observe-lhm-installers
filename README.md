@@ -20,17 +20,9 @@ Create variables file `vars.sh` with the following content, replacing placeholde
 Datacenter can be any arbitrary string. It provides a way to logically group various hosts together.
 
 ```sh
-#!/bin/bash
-
 export OBSERVE_CUSTOMER=<YOUR_CUSTOMER_ID>
 export OBSERVE_TOKEN=<YOUR_OBSERVE_TOKEN>
 export OBSERVE_DATACENTER=<DATACENTER>
-```
-
-Make the script executable
-
-```sh
-chmod 755 vars.sh
 ```
 
 Install agents
