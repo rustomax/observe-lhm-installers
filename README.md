@@ -33,3 +33,13 @@ sudo ./install-osquery.sh
 sudo ./install-fluentbit.sh
 sudo ./install-telegraf.sh
 ```
+
+## Known issues
+
+### Getting `gpg: keyserver receive failed: No such file or directory` error message during osquery install
+
+Make sure you have resolver running on the host, i.e.
+
+```sh
+sudo systemctl start systemd-resolved.service
+```
