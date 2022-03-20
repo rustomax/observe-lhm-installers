@@ -26,6 +26,8 @@ apt-get install -y osquery
 # Copy OSQuery config file
 cp ../configs/osquery.conf /etc/osquery/
 
-# Start the osqueryd service
+# Start the osqueryd service and check on its status
 systemctl restart osqueryd
-systemctl status osqueryd
+echo "Sleeping for 5 sec to allow osqueryd service to start"
+sleep 5
+systemctl status osqueryd --no-pager

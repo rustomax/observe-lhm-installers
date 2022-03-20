@@ -34,5 +34,8 @@ sed -i "s/OBSERVE_DATACENTER/${OBSERVE_DATACENTER}/g" $CONFIG
 sed -i "s/OBSERVE_CUSTOMER/${OBSERVE_CUSTOMER}/g" $CONFIG
 sed -i "s/OBSERVE_TOKEN/${OBSERVE_TOKEN}/g" $CONFIG
 
+# Start the fluent-bit service and check on its status
 systemctl restart td-agent-bit
-systemctl status td-agent-bit
+echo "Sleeping for 5 sec to allow fluent-bit service to start"
+sleep 5
+systemctl status td-agent-bit --no-pager

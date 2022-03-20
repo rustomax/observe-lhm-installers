@@ -33,5 +33,8 @@ sed -i "s/OBSERVE_DATACENTER/${OBSERVE_DATACENTER}/g" $CONFIG
 sed -i "s/OBSERVE_CUSTOMER/${OBSERVE_CUSTOMER}/g" $CONFIG
 sed -i "s/OBSERVE_TOKEN/${OBSERVE_TOKEN}/g" $CONFIG
 
+# Start the telegraf service and check on its status
 systemctl restart telegraf
-systemctl status telegraf
+echo "Sleeping for 5 sec to allow telegraf service to start"
+sleep 5
+systemctl status telegraf --no-pager

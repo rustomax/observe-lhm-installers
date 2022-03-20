@@ -23,8 +23,9 @@ EOT
 # Install the fluentbit agent
 yum install -y fluent-bit-1.8.1-2.amzn2.x86_64
 
-# We need to lock the package to the installed version
+# We need to lock the fluent-bit package to the installed version
 # as later versions require newer libc & libssl, which we don't have
+sudo yum install -y yum-plugin-versionlock
 yum versionlock fluent-bit-*
 
 # Create fluentbit config file
@@ -38,7 +39,7 @@ sed -i "s/OBSERVE_TOKEN/${OBSERVE_TOKEN}/g" $CONFIG
 
 # Start the fluent-bit service and check on its status
 systemctl restart fluent-bit
-echo "Sleeping for 5 sec to allow osqueryd service to start"
+echo "Sleeping for 5 sec to allow fluent-bit service to start"
 sleep 5
 systemctl status fluent-bit --no-pager
 
