@@ -2,7 +2,7 @@
 
 This repo contains unofficial and unsupported scripts for installing and configuring Observe Linux Host monitoring agents.
 
-Currently the scripts only work on Ubuntu 20.04 on bare metal and non-AWS VMs (i.e. in KVM). For up-to-date instructions on other
+Currently the scripts are provided for Ubuntu 20.04 and Fedora 35 on bare metal and non-AWS VMs (i.e. in KVM). For up-to-date instructions on other
 operating systems, please refer to [official documentation](https://docs.observeinc.com/en/latest/content/data-ingestion/integrations/linux.html).
 
 To get an overview of what final result would look like, please see [announcement blog article](https://www.observeinc.com/blog/integrations-linux-host-monitoring/).
