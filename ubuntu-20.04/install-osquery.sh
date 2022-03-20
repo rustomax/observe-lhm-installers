@@ -23,8 +23,9 @@ fi
 apt-get update
 apt-get install -y osquery
 
-# Copy OSQuery config file
+# Create OSQuery config files
 cp ../configs/osquery.conf /etc/osquery/
+cp ../configs/osquery.flags /etc/osquery/
 
 # Start the osqueryd service and check on its status
 systemctl restart osqueryd
